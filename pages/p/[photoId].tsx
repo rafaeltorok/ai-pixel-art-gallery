@@ -29,7 +29,7 @@ export default Home;
 export const getStaticProps: GetStaticProps = async (context) => {
   const images = await getResults();
   const currentPhoto = images.find(
-    (img) => img.id === Number(context.params.photoId),
+    (img) => img.id === Number(context.params.photoId)
   );
 
   return {

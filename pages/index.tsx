@@ -56,7 +56,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                 height={200}
               />
             </div>
-            <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest w-full bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900">
+            <h1 className="mb-4 mt-8 w-full bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 text-base font-bold uppercase tracking-widest">
               Gaming-related pixel art
             </h1>
             <p className="max-w-[40ch] text-white/50 sm:max-w-[32ch]">

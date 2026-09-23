@@ -14,7 +14,10 @@ class MyDocument extends Document {
             property="og:description"
             content="Pixel art images, generated with AI."
           />
-          <meta property="og:title" content="Pixel art images, generated with AI." />
+          <meta
+            property="og:title"
+            content="Pixel art images, generated with AI."
+          />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="AI Pixel art images" />
           <meta

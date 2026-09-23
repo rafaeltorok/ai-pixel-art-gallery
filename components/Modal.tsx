@@ -40,7 +40,7 @@ export default function Modal({
         query: { photoId: newVal },
       },
       `/p/${newVal}`,
-      { shallow: true },
+      { shallow: true }
     );
   }
 

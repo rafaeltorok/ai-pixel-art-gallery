@@ -42,7 +42,7 @@ export default async function getResults(): Promise<ImageProps[]> {
       id,
       url: blob.url,
       ...(await describe(blob.url)),
-    })),
+    }))
   );
   return cached;
 }
