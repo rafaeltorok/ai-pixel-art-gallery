@@ -1,41 +1,46 @@
-# Next.js & Vercel Blob example app
+# AI Pixel Art Gallery
 
-This example shows how to create an image gallery site using Next.js, [Vercel Blob](https://vercel.com/storage/blob), and [Tailwind](https://tailwindcss.com).
+## Table of Contents
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [How to use](#how-to-use)
 
-Images are discovered at build time via the `@vercel/blob` SDK's `list()` API, then probed with [sharp](https://github.com/lovell/sharp) to derive dimensions and pre-generate base64 blur placeholders for `next/image`. The blob `url` is served as-is — `next/image` (Vercel's image optimizer) takes care of responsive avif/webp variants.
 
-## Deploy your own
+## Screenshots
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Desktop Web UI
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-vercel-blob&project-name=nextjs-image-gallery&repository-name=with-vercel-blob&env=BLOB_READ_WRITE_TOKEN&envDescription=Read%2Fwrite%20token%20for%20your%20Vercel%20Blob%20store)
+<img src="./img/desktop-ui.png" width="500" alt="Home page view on desktops" />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Mobile Web UI
 
-## How to use
+<img src="./img/mobile-ui.png" width="250" alt="Home page view on mobile devices" />
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-vercel-blob with-vercel-blob-app
-```
-
-```bash
-yarn create next-app --example with-vercel-blob with-vercel-blob-app
-```
-
-```bash
-pnpm create next-app --example with-vercel-blob with-vercel-blob-app
-```
 
 ## Setup
 
 1. [Create a Vercel Blob store](https://vercel.com/docs/storage/vercel-blob) and upload your images to its root.
-2. Copy `.env.local.example` to `.env.local` and set `BLOB_READ_WRITE_TOKEN` to the store's read/write token. (When deploying via the button above, set it as an environment variable on the project.)
-3. `npm install && npm run dev`.
 
-## References
+2. Create a `.env.local` file and set `BLOB_READ_WRITE_TOKEN` to the store's read/write token.
 
-- Vercel Blob: https://vercel.com/docs/storage/vercel-blob
-- `@vercel/blob` SDK: https://vercel.com/docs/storage/vercel-blob/using-blob-sdk
-- `next/image`: https://nextjs.org/docs/api-reference/next/image
+
+## How to use
+
+Install dependencies
+```bash
+npm install
+```
+
+### Development mode
+
+- Run the app (supports hot reloading)
+  ```bash
+  npm run dev
+  ```
+
+### Production mode
+
+- Build the app and run it
+  ```bash
+  npm run build && npm run start
+  ```
